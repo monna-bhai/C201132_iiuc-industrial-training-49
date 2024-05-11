@@ -81,7 +81,22 @@ print("Pip examples: See comments for usage.")
 # Assignments
 # -----------
 # Assignment 1: Create a simple package with at least two modules, each containing one function.
+
+def function1():
+    print("This is function 1 from module 1.")
+    
+def function2():
+    print("This is function 2 from module 1.")
+    
+print("Assignment 1: Package with modules created.")
+
+
 # Assignment 2: Use pip to install any library that is new to you and write a small script to explore its functionality.
+# pip install emoji
+import emoji
+
+emoji.emojize('Python is :thumbs_up:')
+print("Assignment 2: Library installed and used.")
 
 # Congratulations on completing the comprehensive section on Python's modules, packages, libraries, and pip!
 # Review the assignments, try to solve them, and check your understanding of these essential Python features.
