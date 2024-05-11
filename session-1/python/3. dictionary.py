@@ -62,6 +62,45 @@ print("Dictionary Copy: ", dict_copy)
 # Assignment 1: Create a dictionary representing a student with keys like 'name', 'roll_number', 'grades' (a list of subjects and marks).
 # Perform various operations like adding, removing, and modifying elements.
 # Write your code below:
+my_dict = {
+    "name": "Helal Faruk Monna",
+    "roll_number": "C201132",
+    "grades": [ ("C Programming", 85), ("C++", 90), ("Python", 80), ("Java", 95), ("JavaScript", 90) ]
+}
+print(my_dict)
+
+# Accessing Elements
+print(my_dict['name'])  # Accessing value by key
+
+# Updating dictionary
+my_dict['name'] = 'Helal Faruk MONNA'  # Updates the name
+my_dict['roll_number'] = 'C201132_UP'  # Adds a new key-value pair
+
+# Dictionary Methods
+# keys(), values(), items()
+print(my_dict.keys())  # Prints all keys
+print(my_dict.values())  # Prints all values
+print(my_dict.items())  # Prints all key-value pairs as tuples
+
+# get()
+print(my_dict.get('name'))  # Returns 'Helal Faruk MONNA'
+
+# pop()
+removed_value = my_dict.pop('roll_number')  # Removes 'roll_number' key and returns its value
+
+# popitem()
+last_item = my_dict.popitem()  # Removes and returns the last inserted key-value pair
+
+# update()
+my_dict.update({'name': 'Helal Faruk MONNA', 'roll_number': 'C201132_UP'})  # Updates the dictionary
+
+# clear()
+# my_dict.clear()  # Empties the dictionary
+
+# copy()
+dict_copy = my_dict.copy()  # Creates a shallow copy of the dictionary
+print("Dictionary Copy: ", dict_copy)
+
 
 
 # Section 2: Integrating Dictionaries with Lists and Tuples
@@ -86,6 +125,19 @@ coordinates_info = {(35.6895, 139.6917): "Tokyo", (40.7128, -74.0060): "New York
 # Assignment 2: Create a dictionary where keys are student names and values are lists of grades. Calculate the average grade for each student.
 # Write your code below:
 
+student_grades = {
+    "Munna": [78, 85, 80, 90, 75],
+    "Helal": [90, 88, 95, 80, 85],
+    "Rabby": [78, 85, 50, 90, 75],
+    "Emdad": [90, 90, 96, 90, 90],
+    "Mainul": [85, 85, 85, 85, 85]
+}
+
+# Calculate the average grade for each student
+for student, grades in student_grades.items():
+    average_grade = sum(grades) / len(grades)
+    print(f"{student}'s Average Grade: {average_grade}")
+    
 
 # Congratulations on completing the advanced section on Python dictionaries!
 # Review the assignments, try to solve them, and check your understanding of this powerful data structure.
