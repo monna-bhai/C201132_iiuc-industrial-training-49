@@ -72,6 +72,37 @@ list_length = len(simple_list)
 
 # Assignment 1: Create a 2D list representing a 3x3 matrix and perform operations like accessing, modifying, and iterating through it.
 # Write your code below:
+# Write your code below:
+my_list = [[100, 200, 300], [400, 500, 600], [700, 800, 900]]
+print(my_list)
+my_list_length = len(my_list)
+print(my_list_length)
+
+print(my_list[0][0])  # Outputs 10
+print(my_list[1][1])  # Outputs 50
+print(my_list[2][2])  # Outputs 90
+
+my_list[0][0] = 100
+print(my_list[0][0])  # Outputs 100
+
+for row in my_list:
+    for col in row:
+        print(col)
+        
+my_list.append([100, 200, 300])
+print(my_list)
+
+my_list.insert(0, [1000, 2000, 3000])
+print(my_list)
+
+my_list.remove([1000, 2000, 3000])
+print(my_list)
+
+my_list.pop()
+print(my_list)
+
+my_list.sort()
+print(my_list)
 
 
 # Section 2: Python Tuples
@@ -95,6 +126,16 @@ tuple_dict = {simple_tuple: "My Tuple"}
 
 # Assignment 2: Create a tuple with mixed data types and demonstrate its potential use cases in data structures like dictionaries.
 # Write your code below:
+my_tuple = (1, "salam", 4.58, True, [1, 2, 3], {"name": "Helal Faruk Monna", "age": 25, "city": "Chattogram", "country": "Bangladesh"})
+print(my_tuple)
+
+# Accessing elements
+print(my_tuple[0])  # Outputs 1
+print(my_tuple[1])  # Outputs salam
+print(my_tuple[2])  # Outputs  4.58
+print(my_tuple[3])  # Outputs True
+print(my_tuple[4])  # Outputs [1, 2, 3]
+print(my_tuple[5])  # Outputs {'name': 'Helal Faruk Monna', 'age': 25, 'city': 'Chattogram', 'country': 'Bangladesh'}
 
 
 # Section 3: Advanced Applications
@@ -115,6 +156,10 @@ incremented_matrix = [[cell + 1 for cell in row] for row in matrix]
 
 # Assignment 3: Create a list of tuples, where each tuple contains a student's name and their grade. Sort this list by grades.
 # Write your code below:
+student_grades = [("Kamrul", 33), ("Emdad", 85), ("Sarowar", 95), ("Shoykot", 80), ("Kewna", 100), ("Helal", 75), ("Monna", 95)]
+print(student_grades)
+sorted_student_grades = sorted(student_grades, key=lambda x: x[1], reverse=True)
+print(sorted_student_grades)
 
 
 # Congratulations on completing the advanced section on Python lists and tuples!
