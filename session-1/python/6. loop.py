@@ -97,6 +97,16 @@ for user in users:
 
 
 
+# Assignment 2: Given a list of users with their subscription status, write a loop that sends an email to all subscribed users.
+users = [{"email": "user1@example.com", "subscribed": True},
+         {"email": "user2@example.com", "subscribed": False},
+         {"email": "user3@example.com", "subscribed": True}]
+for user in users:
+    if user["subscribed"]:
+        print(f"Sending email to {user['email']}.")
+
+
+
 # Example 7: User Activity Log Analysis
 # This example processes a list of user activity logs to identify users who performed specific actions.
 
@@ -181,6 +191,7 @@ for product, details in products.items():
         print(f"Alert: {product} stock is low. Please restock.")
     else:
         print(f"{product} stock is sufficient.")
+
 
 
 # Congratulations on completing the advanced section on Python loops!
