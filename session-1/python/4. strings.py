@@ -59,6 +59,13 @@ print(user_input.lstrip())  # Removes leading whitespace
 
 # Assignment 1: Create a string that contains a simple bio data like name, age, and country. Extract each piece of information and print them separately.
 # Write your code below:
+my_bio = "I am Helal Faruk Monna and I am 25 years old and I live in Bangladesh."
+bio_list = my_bio.split(' ')
+print(bio_list)
+print("Name:", bio_list[2], bio_list[3])
+print("Age:", bio_list[7])
+print("Country:", bio_list[14])
+
 
 
 # Section 2: Advanced String Operations
@@ -78,6 +85,10 @@ print(old_greeting)
 
 # Assignment 2: Create a formatted string that includes data from a list or dictionary. For example, use a dictionary to store a person's information and format a string to include it.
 # Write your code below:
+
+person = {"name": "Helal Faruk Monan", "age": 25, "country": "Bangladesh"}
+my_formatted_string = f"My name is {person['name']}, I am {person['age']} years old young boy, and my liiving country is {person['country']}."
+print(my_formatted_string)
 
 
 # Section 3: Advanced Slicing and Multiline Strings
@@ -109,6 +120,21 @@ print(formatted_string)
 
 # Assignment 3: Write a function that takes a string and returns a dictionary with the counts of each character in the string.
 # Write your code below:
+def counting_characters(string):
+    char_count = {}
+    for char in string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    return char_count
+
+
+sample_string = "Helal Faruk Monna"
+frequency_result = counting_characters(sample_string)
+print(frequency_result)
+
+
 
 
 # Section 4: Regular Expressions
@@ -178,7 +204,8 @@ replaced_text = re.sub(r'\d', 'X', 'My number: 12345, office: 98765')
 print("Censored text:", replaced_text)
 
 # Assignment: Write a regex to find all the hashtags in a string.
-text_with_hashtags = "This is a #great day to learn #regex in #Python!"
+
+text_with_hashtags = "Hey, I am #c201132. For me, this is a #great day to #learn #regex in #Python!"
 hashtags = re.findall(r"#(\w+)", text_with_hashtags)
 print("Hashtags:", hashtags)
 
