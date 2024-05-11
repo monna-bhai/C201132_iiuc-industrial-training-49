@@ -90,7 +90,57 @@ with open('users.json', 'r') as file:
 # Assignments
 # -----------
 # Assignment 1: Write a script that reads a CSV file containing product information and converts it into a JSON file.
-# Assignment 2: Create a log file writer that appends log messages to a file with timestamps.
 
+import csv
+import json
+
+def csv_to_json(csv_file, json_file):
+    products = []
+
+    # Read CSV file and convert each row to a dictionary
+    with open(csv_file, 'r', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            products.append(row)
+
+    # Write products list to a JSON file
+    with open(json_file, 'w') as jsonfile:
+        json.dump(products, jsonfile, indent=4)
+
+
+csv_file = 'H:\Field Work - IM - DS\Industrial_Training_Assignment\session-1\python\products.csv'
+json_file = 'H:\Field Work - IM - DS\Industrial_Training_Assignment\session-1\python\products.json'
+csv_to_json(csv_file, json_file)
+
+
+
+
+# Assignment 2: Create a log file writer that appends log messages to a file with timestamps.
+import logging
+from logging.handlers import RotatingFileHandler
+import os
+
+# Ensure the log directory exists
+log_dir = 'H:\\Field Work - IM - DS\\Industrial_Training_Assignment\\session-1\\python\\logs'
+os.makedirs(log_dir, exist_ok=True)
+
+# Set up logging to file
+log_file = os.path.join(log_dir, 'app.log')
+logger = logging.getLogger('my_logger')
+logger.setLevel(logging.INFO)
+
+# Create a file handler which logs even debug messages
+fh = RotatingFileHandler(log_file, maxBytes=10485760, backupCount=5)
+fh.setLevel(logging.INFO)
+
+# Create formatter and add it to the handlers
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+
+# Add the handlers to the logger
+logger.addHandler(fh)
+
+def log_message(message):
+    logger.info(message)
 # Congratulations on completing the comprehensive section on Python file I/O and JSON handling!
 # Review the assignments, try to solve them, and check your understanding of file operations and data formats.
