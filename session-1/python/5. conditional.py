@@ -46,6 +46,13 @@ else:
 
 # Assignment 1: Write a Python script that determines if a number is positive, negative, or zero using if-elif-else.
 # Write your code below:
+my_number = 45
+if my_number > 0:
+    print("The number is positive and it is", my_number, "!")
+elif my_number < 0:
+    print("The number is negative and it is", my_number, "!")
+else:
+    print("The number is zero!")
 
 
 # Section 2: Logical and Boolean Operations
@@ -69,6 +76,13 @@ else:
 
 # Assignment 2: Create a script that checks if a person is eligible for a senior citizen discount based on age and residency.
 # Write your code below:
+age = int(input("Enter your age: "))
+residency = input("Are you a resident? (yes/no): ").lower()
+
+if age >= 65 and residency == 'yes':
+    print("Congratulations!! You are eligible for a senior citizen discount.")
+else:
+    print("Sorry, sir! You are not eligible for a senior citizen discount.")
 
 
 # Section 3: Real-World Applications
@@ -96,7 +110,14 @@ print(f"Ticket price: ${price}")
 # Assignment 3: Write a script that simulates a basic login system. Check username and password correctness.
 # Write your code below:
 
+username = "admin"
+password = "admin"
 
+if username == "admin" and password == "admin":
+    print("Login successful.")
+else:
+    print("Login failed. `username` or `password` is incorrect. Please try again.")
+    
 
 # Example 7: Loan Approval System
 # This example uses multiple conditions to determine if an applicant qualifies for a personal loan.
@@ -145,7 +166,6 @@ if is_loyal_customer:
 print(f"Total shipping cost: ${shipping_cost:.2f}")
 
 # Assignment 4: Implement a system that categorizes a day based on temperature and weather conditions.
-# Use nested if-elif-else and logical operators to determine if it's a beach day, skiing day, or a stay-home day.
 temperature = 30  # in Celsius
 weather = "sunny"
 
@@ -164,6 +184,10 @@ elif weather == "snowy":
 else:
     print("Not a sunny or snowy day, best to stay indoors.")
 
+
+
+
+# Use nested if-elif-else and logical operators to determine if it's a beach day, skiing day, or a stay-home day.
 
 # Congratulations on completing the advanced section on Python conditional statements!
 # Review the assignments, try to solve them, and check your understanding of control flow in Python.
