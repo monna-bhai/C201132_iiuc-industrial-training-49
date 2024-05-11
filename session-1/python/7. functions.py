@@ -147,7 +147,8 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
-print("Factorial of 5:", factorial(5))
+print("Factorial of 5:", factorial(32))
+
 
 # Congratulations on completing the advanced section on Python functions!
 # Review the assignments, try to solve them, and check your understanding of function concepts.
