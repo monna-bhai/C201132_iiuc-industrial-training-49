@@ -67,7 +67,7 @@ Industry standards often follow the 'snake_case' naming style for variables in P
 """
 
 # Example 3: Good and Bad Variable Names
-good_name = "John"
+good_name = "Helal Faruk"
 _bad_name = 23
 # 2bad = 42  # This will raise a SyntaxError because variable names cannot begin with a number.
 
