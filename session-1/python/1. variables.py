@@ -58,6 +58,15 @@ d = True            # bool
 # Assignment 2: Create variables of different types and use the type() function to check their types.
 # Write your code below:
 
+int_var = 201132
+float_var = 10.10
+str_var = "Monna"
+bool_var = True
+
+print(type(int_var))
+print(type(float_var))
+print(type(str_var))
+print(type(bool_var))
 
 # Section 3: Variable Naming Conventions and Industry Standards
 # -------------------------------------------------------------
@@ -72,13 +81,16 @@ Industry standards often follow the 'snake_case' naming style for variables in P
 """
 
 # Example 3: Good and Bad Variable Names
-good_name = "Helal Faruk"
-_bad_name = 23
 # 2bad = 42  # This will raise a SyntaxError because variable names cannot begin with a number.
 
 # Assignment 3: Fix the bad variable name above and create three more variables with good naming practices.
 # Write your code below:
-
+int_var_2 = 28
+float_var_2 = 32.25
+str_var_2 = "Monna"
+another_bool_var = True
+one_more_good_var = "Helal Faruk Monna"
+another_good_var = "ID: C201132"
 
 # Section 4: Python's Dynamic Typing
 # ----------------------------------
@@ -95,6 +107,11 @@ print(var)
 
 # Assignment 4: Create a variable, assign it a value of one type, then reassign it to a different type and print both.
 # Write your code below:
+variable = "C201132"
+print(variable)
+
+variable = 32
+print(variable)
 
 
 # Congratulations on completing this part of the Python workshop!
