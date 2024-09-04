@@ -23,7 +23,7 @@ def create_db_connection():
             passwd=os.getenv("DB_PASS"),
             database=os.getenv("DB_NAME")
         )
-        print("MySQL Database connection successful! Done by- Helal Faruk Monna, C201132!")
+        print("MySQL Database connection successful! Done by- Helal Faruk Monna, C201132 MONNA!")
         return connection
     except Error as e:
         print(f"The error '{e}' occurred")
