@@ -122,4 +122,4 @@ if __name__ == "__main__":
             publisher_website, publisher, title, reporter, news_datetime, category, news_body, images = single_news_scraper(news_link)
             print(publisher, title, reporter, news_datetime, category, images)
             process_and_insert_news_data(conn, publisher_website, publisher, title, reporter, news_datetime, category, images, news_link)
-            # Solved!! by- Sorowar Mahabub, C201032!
+            # Solved!! by- HELAL FARUK MONNA C201132
