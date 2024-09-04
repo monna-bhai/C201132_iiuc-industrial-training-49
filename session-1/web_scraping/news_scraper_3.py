@@ -2,8 +2,8 @@ import time
 import datetime
 from requests_html import HTMLSession
 from mysql.connector import Error
-from c201032_news_db_manager import create_db_connection
-from c201032_news_insert import (execute_query,
+from c201132_news_db_manager import create_db_connection
+from c201132_news_insert import (execute_query,
                                 insert_reporter, 
                                 insert_category, 
                                 insert_news,
